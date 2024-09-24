@@ -126,4 +126,9 @@ def main(place_name):
     highway_nodes = nodes[nodes.geometry.apply(lambda point: point.coords[0]).isin(highway_node_ids)]
 
     selected_nodes_gdf = select_random_nodes(place_name,highway_nodes, apartment_coords, commercial_coords, parking_coords, fuel_stations_coords, supermarket_coords, G)
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("place_name", help="Tên địa điểm để tìm kiếm.")
+    args = parser.parse_args()
+    main(args.place_name)
 
