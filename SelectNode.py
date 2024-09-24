@@ -79,14 +79,21 @@ def select_random_nodes(place_name,highway_nodes, apartment_coords, office_coord
     nodes_gdf.to_file('selected_nodes_{place_name}.geojson', driver='GeoJSON')
     return nodes_gdf
 
+def get_geometries(place_name, tags):
+    try:
+        return ox.geometries_from_place(place_name, tags=tags)
+    except Exception as e:
+        print(f"Không tìm thấy dữ liệu cho {tags}: {e}")
+        return gpd.GeoDataFrame()  # Trả về một GeoDataFrame rỗng nếu không tìm thấy
+
 def main(place_name):
     # Lấy các địa điểm thuộc các loại hình khác nhau (POIs)
-    apartment = ox.geometries_from_place(place_name, tags={'building': 'apartments','residential': 'apartments','landuse': 'residential'})
-    fuel_stations = ox.geometries_from_place(place_name, tags={'amenity': 'fuel'})
-    supermarkets = ox.geometries_from_place(place_name, tags={'shop': 'supermarket','landuse': 'retail', 'building': 'retail','amenity': 'marketplace'})
-    commercial = ox.geometries_from_place(place_name, tags={'landuse': 'commercial'})
-    official = ox.geometries_from_place(place_name, tags={'building': 'office'})
-    parking = ox.geometries_from_place(place_name, tags={'amenity': 'parking'})
+    apartment = get_geometries(place_name, tags={'building': 'apartments', 'residential': 'apartments', 'landuse': 'residential'})
+    fuel_stations = get_geometries(place_name, tags={'amenity': 'fuel'})
+    supermarkets = get_geometries(place_name, tags={'shop': 'supermarket', 'landuse': 'retail', 'building': 'retail', 'amenity': 'marketplace'})
+    commercial = get_geometries(place_name, tags={'landuse': 'commercial'})
+    official = get_geometries(place_name, tags={'building': 'office'})
+    parking = get_geometries(place_name, tags={'amenity': 'parking'})
 
     G = ox.graph_from_place(place_name, network_type='drive')
 
