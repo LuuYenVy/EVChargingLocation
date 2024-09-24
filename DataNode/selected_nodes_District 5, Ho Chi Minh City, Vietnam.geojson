@@ -1,0 +1,15 @@
+{
+"type": "FeatureCollection",
+"name": "selected_nodes_District 5, Ho Chi Minh City, Vietnam",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "osmid": 4851518980, "y": 10.7510858, "x": 106.6539275, "street_count": 3, "highway": null }, "geometry": { "type": "Point", "coordinates": [ 106.6539275, 10.7510858 ] } },
+{ "type": "Feature", "properties": { "osmid": 366469616, "y": 10.7538262, "x": 106.66016, "street_count": 3, "highway": null }, "geometry": { "type": "Point", "coordinates": [ 106.66016, 10.7538262 ] } },
+{ "type": "Feature", "properties": { "osmid": 4628956511, "y": 10.7575898, "x": 106.6743861, "street_count": 3, "highway": null }, "geometry": { "type": "Point", "coordinates": [ 106.6743861, 10.7575898 ] } },
+{ "type": "Feature", "properties": { "osmid": 5802993727, "y": 10.7551226, "x": 106.66645, "street_count": 3, "highway": null }, "geometry": { "type": "Point", "coordinates": [ 106.66645, 10.7551226 ] } },
+{ "type": "Feature", "properties": { "osmid": 2364089048, "y": 10.7563719, "x": 106.6851798, "street_count": 4, "highway": null }, "geometry": { "type": "Point", "coordinates": [ 106.6851798, 10.7563719 ] } },
+{ "type": "Feature", "properties": { "osmid": 5813971175, "y": 10.7501281, "x": 106.6733035, "street_count": 3, "highway": null }, "geometry": { "type": "Point", "coordinates": [ 106.6733035, 10.7501281 ] } },
+{ "type": "Feature", "properties": { "osmid": 2469697625, "y": 10.7628625, "x": 106.6825903, "street_count": 4, "highway": null }, "geometry": { "type": "Point", "coordinates": [ 106.6825903, 10.7628625 ] } },
+{ "type": "Feature", "properties": { "osmid": 8348588368, "y": 10.752731, "x": 106.6797828, "street_count": 1, "highway": null }, "geometry": { "type": "Point", "coordinates": [ 106.6797828, 10.752731 ] } }
+]
+}

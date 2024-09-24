@@ -1,0 +1,17 @@
+{
+"type": "FeatureCollection",
+"name": "selected_nodes_District 3, Ho Chi Minh City, Vietnam",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "osmid": 7576580839, "y": 10.7868469, "x": 106.6648525, "street_count": 3, "highway": null }, "geometry": { "type": "Point", "coordinates": [ 106.6648525, 10.7868469 ] } },
+{ "type": "Feature", "properties": { "osmid": 411918124, "y": 10.7813333, "x": 106.6822278, "street_count": 3, "highway": null }, "geometry": { "type": "Point", "coordinates": [ 106.6822278, 10.7813333 ] } },
+{ "type": "Feature", "properties": { "osmid": 2173080033, "y": 10.7877441, "x": 106.6721481, "street_count": 3, "highway": null }, "geometry": { "type": "Point", "coordinates": [ 106.6721481, 10.7877441 ] } },
+{ "type": "Feature", "properties": { "osmid": 2364059999, "y": 10.7661031, "x": 106.682257, "street_count": 3, "highway": null }, "geometry": { "type": "Point", "coordinates": [ 106.682257, 10.7661031 ] } },
+{ "type": "Feature", "properties": { "osmid": 5778300406, "y": 10.7807024, "x": 106.6890494, "street_count": 3, "highway": null }, "geometry": { "type": "Point", "coordinates": [ 106.6890494, 10.7807024 ] } },
+{ "type": "Feature", "properties": { "osmid": 411918898, "y": 10.7823761, "x": 106.6962018, "street_count": 3, "highway": null }, "geometry": { "type": "Point", "coordinates": [ 106.6962018, 10.7823761 ] } },
+{ "type": "Feature", "properties": { "osmid": 411920922, "y": 10.7737098, "x": 106.6834391, "street_count": 1, "highway": null }, "geometry": { "type": "Point", "coordinates": [ 106.6834391, 10.7737098 ] } },
+{ "type": "Feature", "properties": { "osmid": 411921010, "y": 10.7874294, "x": 106.6848762, "street_count": 3, "highway": null }, "geometry": { "type": "Point", "coordinates": [ 106.6848762, 10.7874294 ] } },
+{ "type": "Feature", "properties": { "osmid": 11133237546, "y": 10.7881035, "x": 106.6916719, "street_count": 2, "highway": null }, "geometry": { "type": "Point", "coordinates": [ 106.6916719, 10.7881035 ] } },
+{ "type": "Feature", "properties": { "osmid": 411918937, "y": 10.769598, "x": 106.6758057, "street_count": 4, "highway": null }, "geometry": { "type": "Point", "coordinates": [ 106.6758057, 10.769598 ] } }
+]
+}

@@ -1,0 +1,33 @@
+{
+"type": "FeatureCollection",
+"name": "selected_nodes_Binh Thanh District, Ho Chi Minh City, Vietnam",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "osmid": 5737979196, "y": 10.8174701, "x": 106.7075095, "street_count": 1, "highway": null }, "geometry": { "type": "Point", "coordinates": [ 106.7075095, 10.8174701 ] } },
+{ "type": "Feature", "properties": { "osmid": 9728403807, "y": 10.7971569, "x": 106.6947005, "street_count": 1, "highway": null }, "geometry": { "type": "Point", "coordinates": [ 106.6947005, 10.7971569 ] } },
+{ "type": "Feature", "properties": { "osmid": 8347550851, "y": 10.8164163, "x": 106.7439767, "street_count": 1, "highway": null }, "geometry": { "type": "Point", "coordinates": [ 106.7439767, 10.8164163 ] } },
+{ "type": "Feature", "properties": { "osmid": 5738082286, "y": 10.8203554, "x": 106.7010103, "street_count": 1, "highway": null }, "geometry": { "type": "Point", "coordinates": [ 106.7010103, 10.8203554 ] } },
+{ "type": "Feature", "properties": { "osmid": 11052087410, "y": 10.8023773, "x": 106.7175588, "street_count": 1, "highway": null }, "geometry": { "type": "Point", "coordinates": [ 106.7175588, 10.8023773 ] } },
+{ "type": "Feature", "properties": { "osmid": 5735274026, "y": 10.8039576, "x": 106.7082234, "street_count": 1, "highway": null }, "geometry": { "type": "Point", "coordinates": [ 106.7082234, 10.8039576 ] } },
+{ "type": "Feature", "properties": { "osmid": 3137343128, "y": 10.8301802, "x": 106.7051556, "street_count": 4, "highway": null }, "geometry": { "type": "Point", "coordinates": [ 106.7051556, 10.8301802 ] } },
+{ "type": "Feature", "properties": { "osmid": 5779523229, "y": 10.8184078, "x": 106.7196993, "street_count": 3, "highway": null }, "geometry": { "type": "Point", "coordinates": [ 106.7196993, 10.8184078 ] } },
+{ "type": "Feature", "properties": { "osmid": 5776272266, "y": 10.7933758, "x": 106.7126439, "street_count": 1, "highway": null }, "geometry": { "type": "Point", "coordinates": [ 106.7126439, 10.7933758 ] } },
+{ "type": "Feature", "properties": { "osmid": 366463246, "y": 10.8136558, "x": 106.7137503, "street_count": 3, "highway": null }, "geometry": { "type": "Point", "coordinates": [ 106.7137503, 10.8136558 ] } },
+{ "type": "Feature", "properties": { "osmid": 9632607406, "y": 10.7886187, "x": 106.7172127, "street_count": 3, "highway": null }, "geometry": { "type": "Point", "coordinates": [ 106.7172127, 10.7886187 ] } },
+{ "type": "Feature", "properties": { "osmid": 5773400814, "y": 10.8047789, "x": 106.6985171, "street_count": 1, "highway": null }, "geometry": { "type": "Point", "coordinates": [ 106.6985171, 10.8047789 ] } },
+{ "type": "Feature", "properties": { "osmid": 5738206945, "y": 10.793483, "x": 106.7213392, "street_count": 4, "highway": null }, "geometry": { "type": "Point", "coordinates": [ 106.7213392, 10.793483 ] } },
+{ "type": "Feature", "properties": { "osmid": 5738018014, "y": 10.8119296, "x": 106.7203358, "street_count": 1, "highway": null }, "geometry": { "type": "Point", "coordinates": [ 106.7203358, 10.8119296 ] } },
+{ "type": "Feature", "properties": { "osmid": 5738447126, "y": 10.8215358, "x": 106.6936813, "street_count": 3, "highway": null }, "geometry": { "type": "Point", "coordinates": [ 106.6936813, 10.8215358 ] } },
+{ "type": "Feature", "properties": { "osmid": 5737980927, "y": 10.7931601, "x": 106.7059566, "street_count": 1, "highway": null }, "geometry": { "type": "Point", "coordinates": [ 106.7059566, 10.7931601 ] } },
+{ "type": "Feature", "properties": { "osmid": 5781828013, "y": 10.8102306, "x": 106.7465844, "street_count": 1, "highway": null }, "geometry": { "type": "Point", "coordinates": [ 106.7465844, 10.8102306 ] } },
+{ "type": "Feature", "properties": { "osmid": 366469312, "y": 10.8113053, "x": 106.6955629, "street_count": 3, "highway": null }, "geometry": { "type": "Point", "coordinates": [ 106.6955629, 10.8113053 ] } },
+{ "type": "Feature", "properties": { "osmid": 696860129, "y": 10.8111654, "x": 106.7076832, "street_count": 4, "highway": null }, "geometry": { "type": "Point", "coordinates": [ 106.7076832, 10.8111654 ] } },
+{ "type": "Feature", "properties": { "osmid": 366468461, "y": 10.8354693, "x": 106.7013422, "street_count": 3, "highway": null }, "geometry": { "type": "Point", "coordinates": [ 106.7013422, 10.8354693 ] } },
+{ "type": "Feature", "properties": { "osmid": 2021899490, "y": 10.8040811, "x": 106.6919803, "street_count": 3, "highway": null }, "geometry": { "type": "Point", "coordinates": [ 106.6919803, 10.8040811 ] } },
+{ "type": "Feature", "properties": { "osmid": 5779558893, "y": 10.820179, "x": 106.7263841, "street_count": 3, "highway": null }, "geometry": { "type": "Point", "coordinates": [ 106.7263841, 10.820179 ] } },
+{ "type": "Feature", "properties": { "osmid": 7782169026, "y": 10.8215654, "x": 106.748271, "street_count": 3, "highway": null }, "geometry": { "type": "Point", "coordinates": [ 106.748271, 10.8215654 ] } },
+{ "type": "Feature", "properties": { "osmid": 366421019, "y": 10.8000632, "x": 106.7236095, "street_count": 3, "highway": null }, "geometry": { "type": "Point", "coordinates": [ 106.7236095, 10.8000632 ] } },
+{ "type": "Feature", "properties": { "osmid": 366429903, "y": 10.8127409, "x": 106.6878397, "street_count": 3, "highway": null }, "geometry": { "type": "Point", "coordinates": [ 106.6878397, 10.8127409 ] } },
+{ "type": "Feature", "properties": { "osmid": 5733481788, "y": 10.8000897, "x": 106.7028124, "street_count": 1, "highway": null }, "geometry": { "type": "Point", "coordinates": [ 106.7028124, 10.8000897 ] } }
+]
+}
