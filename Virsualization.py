@@ -99,5 +99,10 @@ def main(place_name):
     plot_coords_on_map(official_coords, "Official Area Locations", place_name)
     plot_coords_on_map(parking_coords, "Parking Area Locations", place_name)
     plot_coords_on_map(fuel_stations_coords, "Fuel Station Locations", place_name)
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("place_name", help="Tên địa điểm để tìm kiếm.")
+    args = parser.parse_args()
+    main(args.place_name)
 
 

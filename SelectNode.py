@@ -76,7 +76,7 @@ def select_random_nodes(place_name,highway_nodes, apartment_coords, office_coord
                 node_counter += 1
 
     nodes_gdf = gpd.GeoDataFrame(pd.concat(selected_nodes), crs=highway_nodes.crs)
-    nodes_gdf.to_file('selected_nodes_{place_name}.geojson', driver='GeoJSON')
+    nodes_gdf.to_file('/DataNode/selected_nodes_{place_name}.geojson', driver='GeoJSON')
     return nodes_gdf
 
 def get_geometries(place_name, tags):
@@ -126,9 +126,9 @@ def main(place_name):
     highway_nodes = nodes[nodes.geometry.apply(lambda point: point.coords[0]).isin(highway_node_ids)]
 
     selected_nodes_gdf = select_random_nodes(place_name,highway_nodes, apartment_coords, commercial_coords, parking_coords, fuel_stations_coords, supermarket_coords, G)
-
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description='Script to select nodes from a location.')
-    parser.add_argument('place_name', type=str, help='The name of the place to analyze (e.g., "Go Vap District, Ho Chi Minh City, Vietnam")')
+    parser = argparse.ArgumentParser()
+    parser.add_argument("place_name", help="Tên địa điểm để tìm kiếm.")
     args = parser.parse_args()
     main(args.place_name)
+
