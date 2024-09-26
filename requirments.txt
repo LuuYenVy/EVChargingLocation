@@ -1,6 +1,7 @@
 contextily
 fastkml
-networkx scipy osmnx
+networkx 
+scipy
 osmnx
 osmium
 simplekml
