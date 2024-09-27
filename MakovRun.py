@@ -11,6 +11,7 @@ import scipy.sparse as sp
 import json
 import scipy.sparse as sp
 from scipy.sparse import coo_matrix, csr_matrix
+import argparse
 
 def run_markov_chain(transition_matrix, index_mapping, num_iterations):
     # Tạo một danh sách để lưu dữ liệu cho DataFrame
@@ -240,4 +241,9 @@ def main(place_name):
             })
     df_nodes_info = pd.DataFrame(data)
     df_nodes_info.to_csv("Node_pair.csv")
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("place_name", help="Tên địa điểm để tìm kiếm.")
+    args = parser.parse_args()
+    main(args.place_name)
 
