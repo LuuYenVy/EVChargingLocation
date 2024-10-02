@@ -13,7 +13,7 @@ import scipy.sparse as sp
 from scipy.sparse import coo_matrix, csr_matrix
 import argparse
 
-def run_markov_chain(transition_matrix, index_mapping, num_iterations):
+def run_markov_chain(transition_matrix,transition_matrix_sparse, index_mapping, num_iterations):
     # Tạo một danh sách để lưu dữ liệu cho DataFrame
     data = []
     for node_id in index_mapping:
@@ -29,7 +29,6 @@ def run_markov_chain(transition_matrix, index_mapping, num_iterations):
         # Lặp lại quá trình nhân vector với ma trận chuyển tiếp
         current_vector = initial_vector.copy()
         # Chuyển ma trận chuyển tiếp thành ma trận thưa (sparse)
-        transition_matrix_sparse = csr_matrix(transition_matrix)
 
         # Tiến hành các phép toán với ma trận thưa
         current_vector = csr_matrix(initial_vector).T  # Chuyển vector thành ma trận thưa
@@ -193,9 +192,9 @@ def main(place_name):
     # ánh xạ index trong ma trận với id các node đã được chọn
     # Số lần lặp
     num_iterations = 5
-
+    transition_matrix_sparse = csr_matrix(transition_matrix)
     # Chạy hàm và in kết quả
-    df_result = run_markov_chain(transition_matrix_dense, index_mapping, num_iterations)
+    df_result = run_markov_chain(transition_matrix_dense,transition_matrix_sparse, index_mapping, num_iterations)
     print(df_result)
     df_result.to_csv("makov.csv")
     # Tạo DataFrame cặp từ df_result
