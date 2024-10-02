@@ -54,6 +54,10 @@ def run_markov_chain(transition_matrix,transition_matrix_sparse, index_mapping, 
 def create_df_pair(df_result):
     # Danh sách để lưu dữ liệu cho DataFrame mới
     pairs = []
+    # Danh sách lưu các end node đã được thêm vào
+    used_end_nodes = set()
+    # Biến đếm số node đã thêm
+    nodes_added = 0
 
     # Iterating through rows in df_result
     for idx, row in df_result.iterrows():
@@ -64,17 +68,48 @@ def create_df_pair(df_result):
         # Tìm node có xác suất lớn nhất
         end_node_index = np.argmax(final_vector_dense)
 
-        # Kiểm tra xem xác suất lớn nhất có khác 0 không
+        # Kiểm tra xem xác suất lớn nhất có khác 0 không và node không trùng lặp
         if final_vector_dense[end_node_index] > 0:
-            # Thêm vào danh sách các cặp node
-            pairs.append({
-                'start_node_id': row['node_id'],      # Accessing the node_id from the row
-                'start_node_index': row['node_index'], # Accessing the node_index from the row
-                'end_node_index': end_node_index       # Saving the index with the highest probability
-            })
+            # Kiểm tra điều kiện trùng với start_node_id hoặc đã được sử dụng
+            if end_node_index != row['node_index'] and end_node_index not in used_end_nodes:
+                # Thêm node vào danh sách
+                pairs.append({
+                    'start_node_id': row['node_id'],      # Accessing the node_id from the row
+                    'start_node_index': row['node_index'], # Accessing the node_index from the row
+                    'end_node_index': end_node_index       # Saving the index with the highest probability
+                })
+                # Đánh dấu end_node_index là đã sử dụng
+                used_end_nodes.add(end_node_index)
+                nodes_added += 1  # Tăng bộ đếm
+
+            else:
+                # Nếu trùng, tìm node tiếp theo có giá trị nhỏ hơn giá trị max
+                candidates = np.argsort(final_vector_dense)[::-1]  # Sắp xếp từ lớn đến nhỏ
+                for candidate_index in candidates:
+                    if (final_vector_dense[candidate_index] > 0 and
+                        candidate_index != row['node_index'] and
+                        candidate_index not in used_end_nodes):
+                        # Thêm node hợp lệ
+                        pairs.append({
+                            'start_node_id': row['node_id'],
+                            'start_node_index': row['node_index'],
+                            'end_node_index': candidate_index
+                        })
+                        used_end_nodes.add(candidate_index)
+                        nodes_added += 1  # Tăng bộ đếm
+                        break
+                else:
+                    # Nếu không tìm thấy node hợp lệ, bỏ qua dòng này
+                    continue
+        else:
+            # Nếu xác suất lớn nhất bằng 0, bỏ qua dòng này
+            continue
 
     # Tạo DataFrame từ danh sách pairs
     df_pair = pd.DataFrame(pairs)
+
+    # In ra tổng số node đã thêm
+
     return df_pair
 
 # Tạo DataFrame với thông tin đầy đủ
