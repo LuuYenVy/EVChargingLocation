@@ -36,7 +36,8 @@ def find_nearest_node(potential_coords, coord_list):
     return nearest_node, min_distance
 
 # Hàm chọn ngẫu nhiên các node
-def select_random_nodes(place_name,highway_nodes, apartment_coords, office_coords, parking_coords, fuel_stations_coords, supermarket_coords, G, num_nodes=2000, min_distance=700, proximity_threshold=800):
+
+def select_random_nodes(place_name, highway_nodes, apartment_coords, office_coords,  fuel_stations_coords, supermarket_coords, G, num_nodes=2000, min_distance=700, proximity_threshold=800):
     selected_nodes = []
     selected_node_ids = set()
     node_counter = 1
@@ -65,18 +66,31 @@ def select_random_nodes(place_name,highway_nodes, apartment_coords, office_coord
             nearest_office, dist_office = find_nearest_node(potential_coords, office_coords)
             nearest_supermarket, dist_supermarket = find_nearest_node(potential_coords, supermarket_coords)
             nearest_fuel_stations, dist_fuel_stations = find_nearest_node(potential_coords, fuel_stations_coords)
-            nearest_parking, dist_parking = find_nearest_node(potential_coords, parking_coords)
 
-            min_distance_to_poi = min(dist_apartment, dist_office, dist_supermarket, dist_fuel_stations, dist_parking)
-            # print(f"Minimum distance to any POI: {min_distance_to_poi} meters")
+
+            # Tính khoảng cách gần nhất đến các địa điểm
+            min_distance_to_poi = min(dist_apartment, dist_office, dist_supermarket, dist_fuel_stations)
+
+            # Xác định nhãn (label) cho node dựa trên khoảng cách gần nhất
+            if min_distance_to_poi == dist_apartment:
+                label = 0  # apartment
+            elif min_distance_to_poi == dist_office:
+                label = 1  # office
+            elif min_distance_to_poi == dist_supermarket:
+                label = 2  # supermarket
+            elif min_distance_to_poi == dist_fuel_stations:
+                label = 3  # fuel stations
+
+            
+            # Thêm thuộc tính label vào node
+            potential_node['label'] = label
 
             if min_distance_to_poi <= proximity_threshold:
                 selected_nodes.append(potential_node)
-                # print(f"Node {node_counter} được chọn: Kinh độ {potential_coords[1]}, Vĩ độ {potential_coords[0]}")
                 node_counter += 1
 
     nodes_gdf = gpd.GeoDataFrame(pd.concat(selected_nodes), crs=highway_nodes.crs)
-    nodes_gdf.to_file('/DataNode/selected_nodes_{place_name}.geojson', driver='GeoJSON')
+    nodes_gdf.to_file(f'/DataNode/selected_nodes_{place_name}.geojson', driver='GeoJSON')
     return nodes_gdf
 
 def get_geometries(place_name, tags):
@@ -95,27 +109,26 @@ def main(place_name):
     official = get_geometries(place_name, tags={'building': 'office'})
     parking = get_geometries(place_name, tags={'amenity': 'parking'})
 
+    # Gộp ba GeoDataFrame lại thành một GeoDataFrame duy nhất
+    official = pd.concat([official, commercial, parking], ignore_index=True)
+
+    # Nếu bạn muốn giữ lại các thuộc tính gốc, hãy kiểm tra sự trùng lặp và hợp nhất thuộc tính nếu cần
+    official = gpd.GeoDataFrame(official, crs=official.crs)
     G = ox.graph_from_place(place_name, network_type='drive')
 
     apartment_projected = apartment.to_crs(epsg=3857)
     supermarket_projected = supermarkets.to_crs(epsg=3857)
-    commercial_projected = commercial.to_crs(epsg=3857)
     official_projected = official.to_crs(epsg=3857)
-    parking_projected = parking.to_crs(epsg=3857)
     fuel_stations_projected = fuel_stations.to_crs(epsg=3857)
 
     apartment_centroids = apartment_projected.centroid.to_crs(epsg=4326)
     supermarket_centroids = supermarket_projected.centroid.to_crs(epsg=4326)
-    commercial_centroids = commercial_projected.centroid.to_crs(epsg=4326)
     official_centroids = official_projected.centroid.to_crs(epsg=4326)
-    parking_centroids = parking_projected.centroid.to_crs(epsg=4326)
     fuel_stations_centroids = fuel_stations_projected.centroid.to_crs(epsg=4326)
 
     apartment_coords = list(apartment_centroids.apply(lambda x: (x.y, x.x)))
     supermarket_coords = list(supermarket_centroids.apply(lambda x: (x.y, x.x)))
-    commercial_coords = list(commercial_centroids.apply(lambda x: (x.y, x.x)))
     official_coords = list(official_centroids.apply(lambda x: (x.y, x.x)))
-    parking_coords = list(parking_centroids.apply(lambda x: (x.y, x.x)))
     fuel_stations_coords = list(fuel_stations_centroids.apply(lambda x: (x.y, x.x)))
 
     nodes, edges = ox.graph_to_gdfs(G, nodes=True, edges=True)
@@ -125,7 +138,7 @@ def main(place_name):
                                                  highway_edges.geometry.apply(lambda geom: geom.coords[-1]).values]))
     highway_nodes = nodes[nodes.geometry.apply(lambda point: point.coords[0]).isin(highway_node_ids)]
 
-    selected_nodes_gdf = select_random_nodes(place_name,highway_nodes, apartment_coords, commercial_coords, parking_coords, fuel_stations_coords, supermarket_coords, G)
+    selected_nodes_gdf = select_random_nodes(place_name,highway_nodes, apartment_coords, official_coords, fuel_stations_coords, supermarket_coords, G)
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("place_name", help="Tên địa điểm để tìm kiếm.")
