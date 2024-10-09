@@ -3,13 +3,14 @@
 "name": "selected_nodes_District 5, Ho Chi Minh City, Vietnam",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
 "features": [
-{ "type": "Feature", "properties": { "osmid": 4851518980, "y": 10.7510858, "x": 106.6539275, "street_count": 3, "highway": null }, "geometry": { "type": "Point", "coordinates": [ 106.6539275, 10.7510858 ] } },
-{ "type": "Feature", "properties": { "osmid": 366469616, "y": 10.7538262, "x": 106.66016, "street_count": 3, "highway": null }, "geometry": { "type": "Point", "coordinates": [ 106.66016, 10.7538262 ] } },
-{ "type": "Feature", "properties": { "osmid": 4628956511, "y": 10.7575898, "x": 106.6743861, "street_count": 3, "highway": null }, "geometry": { "type": "Point", "coordinates": [ 106.6743861, 10.7575898 ] } },
-{ "type": "Feature", "properties": { "osmid": 5802993727, "y": 10.7551226, "x": 106.66645, "street_count": 3, "highway": null }, "geometry": { "type": "Point", "coordinates": [ 106.66645, 10.7551226 ] } },
-{ "type": "Feature", "properties": { "osmid": 2364089048, "y": 10.7563719, "x": 106.6851798, "street_count": 4, "highway": null }, "geometry": { "type": "Point", "coordinates": [ 106.6851798, 10.7563719 ] } },
-{ "type": "Feature", "properties": { "osmid": 5813971175, "y": 10.7501281, "x": 106.6733035, "street_count": 3, "highway": null }, "geometry": { "type": "Point", "coordinates": [ 106.6733035, 10.7501281 ] } },
-{ "type": "Feature", "properties": { "osmid": 2469697625, "y": 10.7628625, "x": 106.6825903, "street_count": 4, "highway": null }, "geometry": { "type": "Point", "coordinates": [ 106.6825903, 10.7628625 ] } },
-{ "type": "Feature", "properties": { "osmid": 8348588368, "y": 10.752731, "x": 106.6797828, "street_count": 1, "highway": null }, "geometry": { "type": "Point", "coordinates": [ 106.6797828, 10.752731 ] } }
+{ "type": "Feature", "properties": { "osmid": 1997154748, "y": 10.7522184, "x": 106.675151, "street_count": 3, "highway": null, "label": 2, "min_distance_pois": 57.629549525847764 }, "geometry": { "type": "Point", "coordinates": [ 106.675151, 10.7522184 ] } },
+{ "type": "Feature", "properties": { "osmid": 5788957680, "y": 10.7596667, "x": 106.6688443, "street_count": 3, "highway": null, "label": 0, "min_distance_pois": 266.41168833459244 }, "geometry": { "type": "Point", "coordinates": [ 106.6688443, 10.7596667 ] } },
+{ "type": "Feature", "properties": { "osmid": 366378659, "y": 10.7538468, "x": 106.6842732, "street_count": 3, "highway": null, "label": 0, "min_distance_pois": 81.899103094193379 }, "geometry": { "type": "Point", "coordinates": [ 106.6842732, 10.7538468 ] } },
+{ "type": "Feature", "properties": { "osmid": 6791076702, "y": 10.7605452, "x": 106.6835215, "street_count": 3, "highway": null, "label": 3, "min_distance_pois": 54.497942765721525 }, "geometry": { "type": "Point", "coordinates": [ 106.6835215, 10.7605452 ] } },
+{ "type": "Feature", "properties": { "osmid": 8890105341, "y": 10.7493026, "x": 106.657386, "street_count": 3, "highway": null, "label": 2, "min_distance_pois": 129.47980126312481 }, "geometry": { "type": "Point", "coordinates": [ 106.657386, 10.7493026 ] } },
+{ "type": "Feature", "properties": { "osmid": 5813858482, "y": 10.7542152, "x": 106.6529816, "street_count": 3, "highway": null, "label": 0, "min_distance_pois": 230.10309520616534 }, "geometry": { "type": "Point", "coordinates": [ 106.6529816, 10.7542152 ] } },
+{ "type": "Feature", "properties": { "osmid": 3706539116, "y": 10.7582331, "x": 106.6606096, "street_count": 4, "highway": null, "label": 1, "min_distance_pois": 79.350616223009155 }, "geometry": { "type": "Point", "coordinates": [ 106.6606096, 10.7582331 ] } },
+{ "type": "Feature", "properties": { "osmid": 5794771156, "y": 10.7588771, "x": 106.6755484, "street_count": 4, "highway": null, "label": 0, "min_distance_pois": 181.8944195541485 }, "geometry": { "type": "Point", "coordinates": [ 106.6755484, 10.7588771 ] } },
+{ "type": "Feature", "properties": { "osmid": 1997154550, "y": 10.7516157, "x": 106.6656191, "street_count": 4, "highway": null, "label": 0, "min_distance_pois": 203.77754233124338 }, "geometry": { "type": "Point", "coordinates": [ 106.6656191, 10.7516157 ] } }
 ]
 }
