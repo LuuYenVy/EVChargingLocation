@@ -1,0 +1,1179 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2024-10-15T09:03:04Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4393389589",
+        "amenity": "charging_station",
+        "name": "หจก. กระบี่ กีรติ ก๊าซ",
+        "name:th": "หจก. กระบี่ กีรติ ก๊าซ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          98.8622363,
+          8.0935439
+        ]
+      },
+      "id": "node/4393389589"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4411359189",
+        "amenity": "charging_station",
+        "operator": "PTT"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.1065494,
+          10.5108989
+        ]
+      },
+      "id": "node/4411359189"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4572366092",
+        "amenity": "charging_station",
+        "operator": "ptt phattalung"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.055101,
+          7.6041013
+        ]
+      },
+      "id": "node/4572366092"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5372039621",
+        "amenity": "charging_station",
+        "operator": "564"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          102.7147888,
+          16.8311133
+        ]
+      },
+      "id": "node/5372039621"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5684475744",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5960906,
+          13.7189511
+        ]
+      },
+      "id": "node/5684475744"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5836647433",
+        "amenity": "charging_station",
+        "motorcar": "yes",
+        "operator": "SHARGE"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5567844,
+          13.8061704
+        ]
+      },
+      "id": "node/5836647433"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7113413785",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.0522683,
+          18.669836
+        ]
+      },
+      "id": "node/7113413785"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8588117707",
+        "amenity": "charging_station",
+        "authentication:nfc": "yes",
+        "capacity": "3",
+        "fee": "no",
+        "socket:type2": "3"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5431622,
+          13.7448377
+        ]
+      },
+      "id": "node/8588117707"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8591894189",
+        "amenity": "charging_station",
+        "fee": "yes",
+        "name": "PEA Khao Yoi",
+        "operator": "PEA",
+        "socket:chademo": "1",
+        "socket:type2": "1",
+        "socket:type2_combo": "1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.8224787,
+          13.2655051
+        ]
+      },
+      "id": "node/8591894189"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8604453833",
+        "amenity": "charging_station",
+        "name": "Bangchak EV Charging Station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.000009,
+          13.4136301
+        ]
+      },
+      "id": "node/8604453833"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8604453843",
+        "amenity": "charging_station",
+        "name": "Bangchak EV Charging Station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.0830634,
+          13.3322555
+        ]
+      },
+      "id": "node/8604453843"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8604453857",
+        "amenity": "charging_station",
+        "name": "Bangchak EV Charging Station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.9102909,
+          12.9641096
+        ]
+      },
+      "id": "node/8604453857"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8661077797",
+        "amenity": "charging_station",
+        "name": "Bangchak EV Charging Station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          102.0411678,
+          14.9566824
+        ]
+      },
+      "id": "node/8661077797"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8751862946",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.0511014,
+          18.6662398
+        ]
+      },
+      "id": "node/8751862946"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9161401594",
+        "amenity": "charging_station",
+        "capacity": "2",
+        "network": "EleXA",
+        "operator": "EGAT",
+        "socket:chademo": "1",
+        "socket:chademo:output": "50 kW",
+        "socket:type2": "1",
+        "socket:type2:output": "7 kW",
+        "socket:type2_combo": "1",
+        "socket:type2_combo:output": "50 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          98.9399798,
+          18.7572397
+        ]
+      },
+      "id": "node/9161401594"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9164049507",
+        "amenity": "charging_station",
+        "fee": "yes",
+        "network": "MG Supercharge",
+        "note": "KeyWatt WalboxG2+_CCS2",
+        "operator": "MG",
+        "socket:type2_combo": "1",
+        "socket:type2_combo:current": "62",
+        "socket:type2_combo:output": "34100",
+        "socket:type2_combo:voltage": "550"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          98.9806218,
+          18.7677113
+        ]
+      },
+      "id": "node/9164049507"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9164222040",
+        "amenity": "charging_station",
+        "network": "MG Supercharge",
+        "note": "KeyWatt60_CCS2",
+        "operator": "MG",
+        "socket:type2_combo": "1",
+        "socket:type2_combo:current": "125",
+        "socket:type2_combo:output": "62500",
+        "socket:type2_combo:voltage": "500"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          98.9770037,
+          18.7441994
+        ]
+      },
+      "id": "node/9164222040"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9446201126",
+        "amenity": "charging_station",
+        "name": "EV Station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          98.3088123,
+          8.0944059
+        ]
+      },
+      "id": "node/9446201126"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9580341018",
+        "access": "customers",
+        "amenity": "charging_station",
+        "capacity": "2",
+        "fee": "no",
+        "name": "Outback Charging Station",
+        "operator": "Outback Sports Bar and restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.9529845,
+          12.9260425
+        ]
+      },
+      "id": "node/9580341018"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9704922032",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.0631338,
+          18.751538
+        ]
+      },
+      "id": "node/9704922032"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10012701304",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          102.8182323,
+          16.4567847
+        ]
+      },
+      "id": "node/10012701304"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10223569717",
+        "amenity": "charging_station",
+        "name:en": "Phone charging station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.752236,
+          13.6911542
+        ]
+      },
+      "id": "node/10223569717"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10242117732",
+        "access": "yes",
+        "amenity": "charging_station",
+        "capacity": "1",
+        "charge": "50 THB/hour",
+        "fee": "yes",
+        "socket:type2": "1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.3830515,
+          14.5354062
+        ]
+      },
+      "id": "node/10242117732"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10266701247",
+        "amenity": "charging_station",
+        "capacity": "1",
+        "name": "Haupcar",
+        "ref": "Haupcar"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          102.2713433,
+          12.1383421
+        ]
+      },
+      "id": "node/10266701247"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10286933576",
+        "amenity": "charging_station",
+        "fee": "yes",
+        "motorcar": "yes",
+        "name": "Volta",
+        "operator": "Volta"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.4349191,
+          13.0377559
+        ]
+      },
+      "id": "node/10286933576"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10300292280",
+        "amenity": "charging_station",
+        "name": "Ev pluz",
+        "operator": "PTT"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          102.0912729,
+          12.6655589
+        ]
+      },
+      "id": "node/10300292280"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10300616890",
+        "amenity": "charging_station",
+        "name": "EV"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5475824,
+          13.6796569
+        ]
+      },
+      "id": "node/10300616890"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10309447990",
+        "access": "yes",
+        "amenity": "charging_station",
+        "fee": "yes",
+        "name": "Chuan Kitchen",
+        "operator": "EA Anywhere",
+        "payment:credit_cards": "yes",
+        "socket:type2_cable": "1",
+        "socket:type2_combo": "1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5426421,
+          13.9149158
+        ]
+      },
+      "id": "node/10309447990"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10566591987",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.6584236,
+          13.7254467
+        ]
+      },
+      "id": "node/10566591987"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10586381486",
+        "amenity": "charging_station",
+        "brand": "BMA"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.55693,
+          13.7332804
+        ]
+      },
+      "id": "node/10586381486"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10595352902",
+        "amenity": "charging_station",
+        "capacity": "3"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          98.2883133,
+          8.0809741
+        ]
+      },
+      "id": "node/10595352902"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10654292133",
+        "amenity": "charging_station",
+        "fee": "yes",
+        "operator": "E Anywhere",
+        "payment:contactless": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.4340587,
+          18.2340376
+        ]
+      },
+      "id": "node/10654292133"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10738503047",
+        "amenity": "charging_station",
+        "name": "EV Charging"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.3546408,
+          18.3178473
+        ]
+      },
+      "id": "node/10738503047"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10857349584",
+        "amenity": "charging_station",
+        "authentication:app": "yes",
+        "brand": "EA Anywhere",
+        "capacity": "2",
+        "fee": "yes",
+        "motorcar": "yes",
+        "opening_hours": "24/7",
+        "socket:type2": "2",
+        "socket:type2_combo": "2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5720363,
+          13.7680678
+        ]
+      },
+      "id": "node/10857349584"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10859501575",
+        "amenity": "charging_station",
+        "authentication:app": "yes",
+        "brand": "On-ion",
+        "fee": "yes",
+        "indoor": "yes",
+        "level": "0",
+        "motorcar": "yes",
+        "opening_hours": "Mo-Th,Su 11:00-21:00; Fr-Sa 11:00-22:00",
+        "socket:type2_cable": "6",
+        "socket:type2_cable:output": "7"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.8905822,
+          12.9451057
+        ]
+      },
+      "id": "node/10859501575"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10859760665",
+        "amenity": "charging_station",
+        "authentication:app": "yes",
+        "brand": "EA Anywhere",
+        "fee": "yes",
+        "motorcar": "yes",
+        "opening_hours": "24/7",
+        "socket:type2": "2",
+        "socket:type2_combo": "2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.8899551,
+          12.91961
+        ]
+      },
+      "id": "node/10859760665"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10862259029",
+        "amenity": "charging_station",
+        "brand": "EV Station PluZ",
+        "fee": "yes",
+        "indoor": "yes",
+        "level": "M",
+        "motorcar": "yes",
+        "opening_hours": "24/7",
+        "socket:type2_cable": "4",
+        "socket:type2_cable:output": "7"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5603585,
+          13.7379612
+        ]
+      },
+      "id": "node/10862259029"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10864472665",
+        "amenity": "charging_station",
+        "authentication:app": "yes",
+        "authentication:nfc": "yes",
+        "brand": "EVolt",
+        "fee": "yes",
+        "indoor": "yes",
+        "level": "1",
+        "motorcar": "yes",
+        "opening_hours": "24/7",
+        "socket:type2_cable": "2",
+        "socket:type2_cable:output": "22"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.6820718,
+          13.6484137
+        ]
+      },
+      "id": "node/10864472665"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10870093313",
+        "amenity": "charging_station",
+        "brand": "EA Anywhere",
+        "fee": "yes",
+        "indoor": "yes",
+        "motorcar": "yes",
+        "opening_hours": "24/7",
+        "socket:type1": "1",
+        "socket:type1:output": "22",
+        "socket:type2": "2",
+        "socket:type2:output": "22",
+        "socket:type2_cable": "2",
+        "socket:type2_cable:output": "22",
+        "socket:type2_combo": "2",
+        "socket:type2_combo:output": "75"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.6238339,
+          13.5404913
+        ]
+      },
+      "id": "node/10870093313"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11011554194",
+        "access": "customers",
+        "amenity": "charging_station",
+        "capacity": "1",
+        "fee": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5246789,
+          13.7398662
+        ]
+      },
+      "id": "node/11011554194"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11071588904",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5237241,
+          13.7362681
+        ]
+      },
+      "id": "node/11071588904"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11104777562",
+        "amenity": "charging_station",
+        "brand": "GWM"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          98.3616928,
+          7.9787958
+        ]
+      },
+      "id": "node/11104777562"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11127493271",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "EleX",
+        "capacity": "2",
+        "fee": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5301735,
+          13.7320025
+        ]
+      },
+      "id": "node/11127493271"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11189744094",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5315422,
+          13.7349612
+        ]
+      },
+      "id": "node/11189744094"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11189744095",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5310719,
+          13.7344615
+        ]
+      },
+      "id": "node/11189744095"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11196270416",
+        "access": "private",
+        "amenity": "charging_station",
+        "capacity": "30",
+        "operator": "PMCU"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5252683,
+          13.7363418
+        ]
+      },
+      "id": "node/11196270416"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11196270417",
+        "access": "permissive",
+        "amenity": "charging_station",
+        "capacity": "4"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5254949,
+          13.7362245
+        ]
+      },
+      "id": "node/11196270417"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11342660671",
+        "amenity": "charging_station",
+        "name:en": "Electric GV"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.8854722,
+          19.1795288
+        ]
+      },
+      "id": "node/11342660671"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11345597173",
+        "amenity": "charging_station",
+        "name:en": "EV STATION"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.5142841,
+          19.1932076
+        ]
+      },
+      "id": "node/11345597173"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11347643104",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.0888058,
+          18.7337617
+        ]
+      },
+      "id": "node/11347643104"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11378903989",
+        "amenity": "charging_station",
+        "name": "Elex Charging Station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          97.9648676,
+          19.2920623
+        ]
+      },
+      "id": "node/11378903989"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11407007472",
+        "amenity": "charging_station",
+        "brand": "Evolt",
+        "fee": "yes",
+        "indoor": "yes",
+        "level": "-1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.9604836,
+          12.5709176
+        ]
+      },
+      "id": "node/11407007472"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11407012686",
+        "amenity": "charging_station",
+        "fee": "yes",
+        "indoor": "yes",
+        "level": "4"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5433993,
+          13.6727275
+        ]
+      },
+      "id": "node/11407012686"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11451535023",
+        "amenity": "charging_station",
+        "brand": "PTT",
+        "fee": "yes",
+        "motorcar": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.5580103,
+          13.896952
+        ]
+      },
+      "id": "node/11451535023"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11496926020",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "Altervim",
+        "capacity": "2",
+        "mapillary": "3524659604417047"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.9232173,
+          14.5210905
+        ]
+      },
+      "id": "node/11496926020"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11497027672",
+        "access": "yes",
+        "amenity": "charging_station",
+        "capacity": "1",
+        "mapillary": "3390814767876225"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.0482333,
+          14.69165
+        ]
+      },
+      "id": "node/11497027672"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11497027673",
+        "access": "yes",
+        "amenity": "charging_station",
+        "capacity": "1",
+        "mapillary": "3390814767876225"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.0482363,
+          14.6916754
+        ]
+      },
+      "id": "node/11497027673"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11497027674",
+        "access": "yes",
+        "amenity": "charging_station",
+        "capacity": "1",
+        "mapillary": "3390814767876225"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.0482396,
+          14.6917053
+        ]
+      },
+      "id": "node/11497027674"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11509788273",
+        "amenity": "charging_station",
+        "operator": "PTT"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          98.9743767,
+          18.7206858
+        ]
+      },
+      "id": "node/11509788273"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11556030590",
+        "amenity": "charging_station",
+        "capacity": "2",
+        "motorcar": "yes",
+        "name": "PEA Volta",
+        "operator": "Provincial Electricity Authority"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.1338296,
+          18.8733985
+        ]
+      },
+      "id": "node/11556030590"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11626388161",
+        "access": "yes",
+        "amenity": "charging_station",
+        "capacity": "6",
+        "fee": "yes",
+        "voltage": "240"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.0349127,
+          18.6551934
+        ]
+      },
+      "id": "node/11626388161"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11626388162",
+        "access": "yes",
+        "amenity": "charging_station",
+        "amperage": "32",
+        "authentication:none": "yes",
+        "brand": "Toyota",
+        "capacity": "1",
+        "fee": "no",
+        "indoor": "yes",
+        "opening_hours": "24/7",
+        "socket:type2": "1",
+        "voltage": "250"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.0349026,
+          18.6552071
+        ]
+      },
+      "id": "node/11626388162"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11849500162",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5313072,
+          13.7322249
+        ]
+      },
+      "id": "node/11849500162"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11974561944",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.9094998,
+          13.2917743
+        ]
+      },
+      "id": "node/11974561944"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12025146061",
+        "amenity": "charging_station",
+        "operator": "Shell Recharge Solutions",
+        "operator:wikidata": "Q105883058",
+        "website": "https://find.shell.com/th/fuel/10042014-co-sin-poon-phol-b1-mabkha-ryg/en_TH"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.163949,
+          12.7801081
+        ]
+      },
+      "id": "node/12025146061"
+    }
+  ]
+}
