@@ -90,7 +90,7 @@ def select_random_nodes(place_name, highway_nodes, apartment_coords, office_coor
                 node_counter += 1
 
     nodes_gdf = gpd.GeoDataFrame(pd.concat(selected_nodes), crs=highway_nodes.crs)
-    nodes_gdf.to_file(f'/DataNode/selected_nodes_{place_name}.geojson', driver='GeoJSON')
+    nodes_gdf.to_file(f'/DataNode/selected_nodes'+place_name+'.geojson', driver='GeoJSON')
     return nodes_gdf
 
 def get_geometries(place_name, tags):
