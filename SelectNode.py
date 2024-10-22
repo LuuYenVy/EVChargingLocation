@@ -37,7 +37,7 @@ def find_nearest_node(potential_coords, coord_list):
 
 # Hàm chọn ngẫu nhiên các node
 
-def select_random_nodes(place_name, highway_nodes, apartment_coords, office_coords,  fuel_stations_coords, supermarket_coords, G, num_nodes=2000, min_distance=700, proximity_threshold=800):
+def select_random_nodes(place_name, highway_nodes, apartment_coords, office_coords,  fuel_stations_coords, supermarket_coords, G, num_nodes=2000, min_distance=200, proximity_threshold=800):
     selected_nodes = []
     selected_node_ids = set()
     node_counter = 1
