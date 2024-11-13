@@ -155,7 +155,6 @@ def main(place_name):
 
     np.fill_diagonal(transition_matrix_dense, 0)
 
-    initial_vector = np.zeros(len(highway_node_osmids))
 
     geojson_file = 'DataNode/NodeSelected.geojson'
 
