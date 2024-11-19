@@ -75,10 +75,10 @@ def select_random_nodes(place_name, highway_nodes, pois_coords, G, num_nodes=200
                 break
 
         if valid_node:
-            nearest_pois, dist_pois = find_nearest_node(pois_coords, apartment_coords)
+            nearest_pois, dist_pois = find_nearest_node(potential_coords, pois_coords)
             
             potential_node['min_distance_to_poi'] = dist_pois
-            if min_distance_to_poi <= proximity_threshold:
+            if dist_pois <= proximity_threshold:
                 selected_nodes.append(potential_node)
                 node_counter += 1
 
