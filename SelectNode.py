@@ -35,8 +35,21 @@ def find_nearest_node(potential_coords, coord_list):
             nearest_node = coord
     return nearest_node, min_distance
 
-# Hàm chọn ngẫu nhiên các node
+def select_potential_nodes(pois_coords, highway_nodes):
+    """
+    Chọn các node tiềm năng từ highway_nodes dựa trên khoảng cách gần nhất với mỗi POI.
+    """
+    potential_nodes = []
+    for poi in pois_coords:
+        nearest_node, _ = find_nearest_node(poi, highway_nodes.geometry.apply(lambda geom: (geom.y, geom.x)).tolist())
+        potential_nodes.append(nearest_node)
 
+    # Tạo GeoDataFrame từ các node tiềm năng
+    potential_nodes_gdf = highway_nodes[highway_nodes.geometry.apply(
+        lambda point: (point.y, point.x)).isin(potential_nodes)]
+    
+    return potential_nodes_gdf
+    
 def select_random_nodes(place_name, highway_nodes, pois_coords, G, num_nodes=2000, min_distance=400, proximity_threshold=200):
     selected_nodes = []
     selected_node_ids = set()
@@ -70,7 +83,6 @@ def select_random_nodes(place_name, highway_nodes, pois_coords, G, num_nodes=200
                 node_counter += 1
 
     nodes_gdf = gpd.GeoDataFrame(pd.concat(selected_nodes), crs=highway_nodes.crs)
-    nodes_gdf.to_file(f'DataNode/selected_nodes_'+place_name+'.geojson', driver='GeoJSON')
     return nodes_gdf
 
 def get_geometries(place_name, tags):
@@ -103,8 +115,11 @@ def main(place_name):
     highway_node_ids = np.unique(np.concatenate([highway_edges.geometry.apply(lambda geom: geom.coords[0]).values,
                                                  highway_edges.geometry.apply(lambda geom: geom.coords[-1]).values]))
     highway_nodes = nodes[nodes.geometry.apply(lambda point: point.coords[0]).isin(highway_node_ids)]
-
+    potential_nodes_gdf = select_potential_nodes(pois_coords, highway_nodes)
     selected_nodes_gdf = select_random_nodes(place_name,highway_nodes, pois_coords, G)
+    combined_nodes_gdf = pd.concat([potential_nodes_gdf, selected_nodes_gdf]).drop_duplicates()
+    
+    combined_nodes_gdf.to_file(f'DataNode/selected_nodes_' + place_name + '.geojson', driver='GeoJSON')
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("place_name", help="Tên địa điểm để tìm kiếm.")
