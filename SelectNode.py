@@ -35,9 +35,36 @@ def find_nearest_node(potential_coords, coord_list):
             nearest_node = coord
     return nearest_node, min_distance
 
-# Hàm chọn ngẫu nhiên các node
+def select_potential_nodes(pois_coords, highway_nodes):
+    """
+    Chọn các node tiềm năng từ highway_nodes dựa trên khoảng cách gần nhất với mỗi POI.
+    """
+    potential_nodes = []
+    for poi in pois_coords:
+        nearest_node, dist_pois = find_nearest_node(poi, highway_nodes.geometry.apply(lambda geom: (geom.y, geom.x)).tolist())
+        
+        # Create a dictionary to hold additional info and the nearest node's coordinates
+        potential_nodes.append({
+            'min_distance_to_poi': dist_pois,
+            'geometry': Point(nearest_node[1], nearest_node[0]),
+            'x': nearest_node[1],
+            'y':nearest_node[0] 
+        })
 
-def select_random_nodes(place_name, highway_nodes, apartment_coords, office_coords,  fuel_stations_coords, supermarket_coords, G, num_nodes=2000, min_distance=400, proximity_threshold=200):
+    # Convert to GeoDataFrame, assuming you want to use 'geometry' as the geometry field
+    potential_nodes_gdf = gpd.GeoDataFrame(potential_nodes, crs=highway_nodes.crs)
+
+    return potential_nodes_gdf
+
+
+
+    # Tạo GeoDataFrame từ các node tiềm năng
+    potential_nodes_gdf = highway_nodes[highway_nodes.geometry.apply(
+        lambda point: (point.y, point.x)).isin(potential_nodes)]
+    
+    return potential_nodes_gdf
+    
+def select_random_nodes(place_name, highway_nodes, pois_coords, G, num_nodes=2000, min_distance=400, proximity_threshold=200):
     selected_nodes = []
     selected_node_ids = set()
     node_counter = 1
@@ -62,35 +89,14 @@ def select_random_nodes(place_name, highway_nodes, apartment_coords, office_coor
                 break
 
         if valid_node:
-            nearest_apartment, dist_apartment = find_nearest_node(potential_coords, apartment_coords)
-            nearest_office, dist_office = find_nearest_node(potential_coords, office_coords)
-            nearest_supermarket, dist_supermarket = find_nearest_node(potential_coords, supermarket_coords)
-            nearest_fuel_stations, dist_fuel_stations = find_nearest_node(potential_coords, fuel_stations_coords)
-
-
-            # Tính khoảng cách gần nhất đến các địa điểm
-            min_distance_to_poi = min(dist_apartment, dist_office, dist_supermarket, dist_fuel_stations)
-
-            # Xác định nhãn (label) cho node dựa trên khoảng cách gần nhất
-            if min_distance_to_poi == dist_apartment:
-                label = 0  # apartment
-            elif min_distance_to_poi == dist_office:
-                label = 1  # office
-            elif min_distance_to_poi == dist_supermarket:
-                label = 2  # supermarket
-            elif min_distance_to_poi == dist_fuel_stations:
-                label = 3  # fuel stations
-
+            nearest_pois, dist_pois = find_nearest_node(potential_coords, pois_coords)
             
-            # Thêm thuộc tính label vào node
-            potential_node['label'] = label
-            potential_node['min_distance_to_poi'] = min_distance_to_poi
-            if min_distance_to_poi <= proximity_threshold:
+            potential_node['min_distance_to_poi'] = dist_pois
+            if dist_pois <= proximity_threshold:
                 selected_nodes.append(potential_node)
                 node_counter += 1
 
     nodes_gdf = gpd.GeoDataFrame(pd.concat(selected_nodes), crs=highway_nodes.crs)
-    nodes_gdf.to_file(f'DataNode/selected_nodes_'+place_name+'.geojson', driver='GeoJSON')
     return nodes_gdf
 
 def get_geometries(place_name, tags):
@@ -108,37 +114,26 @@ def main(place_name):
     commercial = get_geometries(place_name, tags={'landuse': 'commercial'})
     official = get_geometries(place_name, tags={'building': 'office'})
     parking = get_geometries(place_name, tags={'amenity': 'parking'})
+    uni = get_geometries(place_name, tags={'amenity': 'university'})
+    pois = pd.concat([apartment, fuel_stations, supermarkets, commercial, official, parking,uni], ignore_index=True)
 
-    # Gộp ba GeoDataFrame lại thành một GeoDataFrame duy nhất
-    official = pd.concat([official, commercial, parking], ignore_index=True)
-
-    # Nếu bạn muốn giữ lại các thuộc tính gốc, hãy kiểm tra sự trùng lặp và hợp nhất thuộc tính nếu cần
-    official = gpd.GeoDataFrame(official, crs=official.crs)
     G = ox.graph_from_place(place_name, network_type='drive')
 
-    apartment_projected = apartment.to_crs(epsg=3857)
-    supermarket_projected = supermarkets.to_crs(epsg=3857)
-    official_projected = official.to_crs(epsg=3857)
-    fuel_stations_projected = fuel_stations.to_crs(epsg=3857)
-
-    apartment_centroids = apartment_projected.centroid.to_crs(epsg=4326)
-    supermarket_centroids = supermarket_projected.centroid.to_crs(epsg=4326)
-    official_centroids = official_projected.centroid.to_crs(epsg=4326)
-    fuel_stations_centroids = fuel_stations_projected.centroid.to_crs(epsg=4326)
-
-    apartment_coords = list(apartment_centroids.apply(lambda x: (x.y, x.x)))
-    supermarket_coords = list(supermarket_centroids.apply(lambda x: (x.y, x.x)))
-    official_coords = list(official_centroids.apply(lambda x: (x.y, x.x)))
-    fuel_stations_coords = list(fuel_stations_centroids.apply(lambda x: (x.y, x.x)))
-
+    pois_projected = pois.to_crs(epsg=3857)
+    pois_centroids = pois_projected.centroid.to_crs(epsg=4326)
+    pois_coords = list(pois_centroids.apply(lambda x: (x.y, x.x)))
+    
     nodes, edges = ox.graph_to_gdfs(G, nodes=True, edges=True)
     highway_edges = edges[edges['highway'].notnull()]
 
     highway_node_ids = np.unique(np.concatenate([highway_edges.geometry.apply(lambda geom: geom.coords[0]).values,
                                                  highway_edges.geometry.apply(lambda geom: geom.coords[-1]).values]))
     highway_nodes = nodes[nodes.geometry.apply(lambda point: point.coords[0]).isin(highway_node_ids)]
-
-    selected_nodes_gdf = select_random_nodes(place_name,highway_nodes, apartment_coords, official_coords, fuel_stations_coords, supermarket_coords, G)
+    potential_nodes_gdf = select_potential_nodes(pois_coords, highway_nodes)
+    selected_nodes_gdf = select_random_nodes(place_name,highway_nodes, pois_coords, G)
+    combined_nodes_gdf = pd.concat([potential_nodes_gdf, selected_nodes_gdf]).drop_duplicates()
+    
+    combined_nodes_gdf.to_file(f'DataNode/selected_nodes_' + place_name + '.geojson', driver='GeoJSON')
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("place_name", help="Tên địa điểm để tìm kiếm.")
