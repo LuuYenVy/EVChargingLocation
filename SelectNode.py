@@ -41,12 +41,22 @@ def select_potential_nodes(pois_coords, highway_nodes):
     """
     potential_nodes = []
     for poi in pois_coords:
-        nearest_node, _ = find_nearest_node(poi, highway_nodes.geometry.apply(lambda geom: (geom.y, geom.x)).tolist())
-        potential_coords = (potential_nodes.geometry.y.values[0], potential_nodes.geometry.x.values[0])
-        nearest_pois, dist_pois = find_nearest_node(potential_coords, pois_coords)
-            
-        potential_nodes['min_distance_to_poi'] = dist_pois
-        potential_nodes.append(nearest_node)
+        nearest_node, dist_pois = find_nearest_node(poi, highway_nodes.geometry.apply(lambda geom: (geom.y, geom.x)).tolist())
+        
+        # Create a dictionary to hold additional info and the nearest node's coordinates
+        potential_nodes.append({
+            'min_distance_to_poi': dist_pois,
+            'geometry': Point(nearest_node[1], nearest_node[0]),
+            'x': nearest_node[1],
+            'y':nearest_node[0] 
+        })
+
+    # Convert to GeoDataFrame, assuming you want to use 'geometry' as the geometry field
+    potential_nodes_gdf = gpd.GeoDataFrame(potential_nodes, crs=highway_nodes.crs)
+
+    return potential_nodes_gdf
+
+
 
     # Tạo GeoDataFrame từ các node tiềm năng
     potential_nodes_gdf = highway_nodes[highway_nodes.geometry.apply(
